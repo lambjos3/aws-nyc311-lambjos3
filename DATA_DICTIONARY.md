@@ -34,24 +34,23 @@
 **agencies**: [12] rows × 2 cols (~1 KB)  
 **Date range**: 2026-01-29 to 2026-03-21  
 
-
-
 ## Usage Notes
 
 - **Primary join**: `complaints.agency = agencies.agency`
 - **Common analyses**:
-    - Daily request volume by borough/agency
-    - Average resolution time by problem type
-    - Top complaint types per borough
-    - Predict resolution status (Open/Closed)
-- **Known issues**:
-    - `closed_date`: Empty strings = open requests
-    - `incident_zip`: Some 0/null/out-of-range values
-    - String dates: Use `DATE_PARSE(created_date, '%Y-%m-%d %H:%M:%S')` in Athena
-    - `resolution_description`: Long text, some empty
+  - Daily request volume by borough/agency
+  - Average resolution time by problem type
+  - Top complaint types per borough
+  - Predict resolution status (Open/Closed)
 
-**S3 structure example (update this to match your actual S3 bucket structure!)**:
+## Known issues
 
+- `closed_date`: Empty strings = open requests  
+- `incident_zip`: Some 0/null/out-of-range values  
+- String dates: Use `DATE_PARSE(created_date, '%Y-%m-%d %H:%M:%S')` in Athena  
+- `resolution_description`: Long text, some empty  
+
+## S3 structure
 ```
 s3://your-bucket/raw/
 ├── complaints.csv

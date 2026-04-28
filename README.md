@@ -14,7 +14,7 @@
 ## Project Structure
 
 ```
-aws-nyc311-yourMSUNetID/      # Update with your GitHub repo name
+aws-nyc311-lambjos3/      # Update with your GitHub repo name
 ├── README.md                 # Data source, S3 paths, assumptions
 ├── data-dictionary.md        # Column details
 ├── raw/                      # Local copies of S3 uploads
@@ -31,7 +31,7 @@ See `data-dictionary.md` for full schema.
 **Key relationships**: Join `complaints.agency = agencies.agency`
 
 **Stakeholder questions**:
-- [Paste your specific problem brief here]
+- Estimate how many days it will take a 311 complaint to close
 
 ## Assumptions and Known Issues
 - Empty `closed_date` = open/unresolved requests
